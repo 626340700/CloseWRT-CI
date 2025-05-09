@@ -22,18 +22,18 @@ if [ -d *"homeproxy"* ]; then
 	cd .. && rm -rf ./$HP_RULE/
 
 	cd $PKG_PATH && echo "homeproxy date has been updated!"
-fi
+#fi
 
 #修改argon主题字体和颜色
-if [ -d *"luci-theme-argon"* ]; then
-	echo " "
+#if [ -d *"luci-theme-argon"* ]; then
+#	echo " "
 
-	cd ./luci-theme-argon/
+#	cd ./luci-theme-argon/
 
-	sed -i "/font-weight:/ { /important/! { /\/\*/! s/:.*/: var(--font-weight);/ } }" $(find ./luci-theme-argon -type f -iname "*.css")
-	sed -i "s/primary '.*'/primary '#31a1a1'/; s/'0.2'/'0.5'/; s/'none'/'bing'/; s/'600'/'normal'/" ./luci-app-argon-config/root/etc/config/argon
+#	sed -i "/font-weight:/ { /important/! { /\/\*/! s/:.*/: var(--font-weight);/ } }" $(find ./luci-theme-argon -type f -iname "*.css")
+#	sed -i "s/primary '.*'/primary '#31a1a1'/; s/'0.2'/'0.5'/; s/'none'/'bing'/; s/'600'/'normal'/" ./luci-app-argon-config/root/etc/config/argon
 
-	cd $PKG_PATH && echo "theme-argon has been fixed!"
+#	cd $PKG_PATH && echo "theme-argon has been fixed!"
 fi
 
 #修改qca-nss-drv启动顺序
