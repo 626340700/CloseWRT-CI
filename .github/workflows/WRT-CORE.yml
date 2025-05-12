@@ -11,7 +11,7 @@ on:
         required: false
         type: string
       WRT_NAME:
-        required: true
+        required: false
         type: string
       WRT_SSID:
         required: true
